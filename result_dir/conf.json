@@ -1,0 +1,21 @@
+{
+    "model": "Segformer",
+    "PR_Backbone": "resnet101",
+    "dataset": "JM",
+    "res_dir": "result_dir",
+    "num_workers": 8,
+    "device": "cuda",
+    "display_step": 50,
+    "epochs": 50,
+    "batch_size": 8,
+    "lr": 0.002,
+    "ignore_index": null,
+    "val_every": 1,
+    "val_after": 0,
+    "num_classes": 3,
+    "channels": 10,
+    "emd_dim": 192,
+    "patch_size": 4,
+    "img_size": 128,
+    "N_Parameter": 4619729
+}
