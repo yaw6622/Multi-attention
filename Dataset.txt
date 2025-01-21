@@ -14,4 +14,4 @@ BAIDU YUNPAN(China mainland only)：  链接：https://pan.baidu.com/s/1YnG1GRwM
 
 5.For the JM dataset, please go to (https://github.com/yaw6622/DBL) to download the original time-series dataset.
 
-###For regions outside mainland China, we have identified public data sources and made them openly accessible.
+###For regions outside China mainland, we will identify public data sources and make them openly accessible ASAP.
