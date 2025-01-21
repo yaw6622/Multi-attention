@@ -37,19 +37,20 @@ See Dataset.txt.
 
 ### Open EarthMap
 
-## Comparsion with some other models.
-Due to the lack of generality in some code frameworks, we have not fully transferred all code implementations to our provided framework. At this stage, certain comparative experiments are not conducted within our framework. The models implemented within our framework include the MAIN model, FPN model, DeeplabV3+ and LinkNet model.
-### Segmenter
-For the Segmenter model, experiments are conducted using the codebase available at [Segmenter](https://github.com/rstrudel/segmenter).
-
-### Vim
-For the Vim model, experiments are conducted using the codebase available at [Vim](https://github.com/hustvl/Vim).
-
-### Segformer
-For the Segformer model, experiments are conducted using the codebase available at [Segformer](https://github.com/NVlabs/SegFormer).
-
 ## Obtain the outputs  
 - After trianing, you could obtain the results in './results/'
+
+# Comparsion with some other models.
+Due to the lack of generality in some code frameworks, we have not fully transferred all code implementations to our provided framework. At this stage, certain comparative experiments are not conducted within our framework. The models implemented within our framework include the MAIN model, FPN model, DeeplabV3+ and LinkNet model.
+## Segmenter
+For the Segmenter model, experiments are conducted using the codebase available at [Segmenter](https://github.com/rstrudel/segmenter).
+
+## Vim
+For the Vim model, experiments are conducted using the codebase available at [Vim](https://github.com/hustvl/Vim).
+
+## Segformer
+For the Segformer model, experiments are conducted using the codebase available at [Segformer](https://github.com/NVlabs/SegFormer).
+
 
 ## Pretrained model
 
