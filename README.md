@@ -31,8 +31,8 @@ For the Segformer model, experiments are conducted using the codebase available 
 ## Train the model
 ```bash
 cd Multi-attention
-python My_.py  # Train the Model on the datasets.
-```trainFrame
+python My_trainFrame.py  # Train the Model on the datasets.
+```
 
 ## Dataset availability
 See Dataset.txt.
