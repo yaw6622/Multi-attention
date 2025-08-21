@@ -117,11 +117,6 @@ class AFFDecoder(nn.Module):
             nn.Conv2d(aspp_out, num_classes, 1, bias=True)
         )
 
-        # 可选：边界分支（辅助监督）
-        self.boundary = nn.Sequential(
-            ConvBNAct(aspp_out, aspp_out//2, k=3),
-            nn.Conv2d(aspp_out//2, 1, 1, bias=True)
-        )
 
     def forward(self, x4_t, x4_e, x8_m, x16_m, out_hw):
         """
@@ -151,8 +146,6 @@ class AFFDecoder(nn.Module):
         logits_1_4 = self.head_1_4(ctx)
         logits = F.interpolate(logits_1_4, size=out_hw, mode='bilinear', align_corners=False)
 
-        # 可返回边界图用于辅助损失（可选）
-        boundary_1_4 = self.boundary(ctx)
-        boundary = F.interpolate(boundary_1_4, size=out_hw, mode='bilinear', align_corners=False)
 
         return logits, logits_1_4, boundary, weights
+
