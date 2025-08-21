@@ -1,5 +1,5 @@
-#This file contains an old version codes of MAI Network, which includes branches of 3 attention mechanisms and a regular decoder. The code of AFFN is separately put in the file AFFN.py. We will
-#update the new version of MAI Network with AFFN included ASAP.
+#This file contains an old version codes of MAI Network, which includes branches of 3 attention mechanisms and a regular decoder. The code of AFFD is separately put in the file AFFD.py. We will
+#update the new version of MAI Network with AFFD included ASAP.
 
 import torch
 import torch.nn as nn
@@ -690,3 +690,4 @@ class AdaptATT(nn.Module):
         # return output, self.weight_Mamba_other, self.weight_EMA_Transformer
 
         return output, self.weight_EMA_Transformer, self.weight_Mamba_other
+
