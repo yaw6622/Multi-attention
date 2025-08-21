@@ -1,3 +1,6 @@
+#This file contains an old version codes of MAI Network, which includes branches of 3 attention mechanisms and a regular decoder. The code of AFFN is separately put in the file AFFN.py. We will
+#update the new version of MAI Network with AFFN included ASAP.
+
 import torch
 import torch.nn as nn
 from timm.models.layers import DropPath, to_2tuple
@@ -365,7 +368,7 @@ class DWConv(nn.Module):  # 使用卷积获取位置信息，融合在mix-ffn里
 
         return x
 
-class EfficientSelfAttention(nn.Module):  # 感觉基本借鉴了PVT的注意力实现
+class EfficientSelfAttention(nn.Module):  # 
     def __init__(self, dim, num_heads, qkv_bias=False, qk_scale=None, attn_drop=0., proj_drop=0., sr_ratio=1):
         super().__init__()
         self.dim = dim
@@ -459,7 +462,7 @@ class TransformerBlock(nn.Module):
         self.norm2 = norm_layer(dim)
         self.mlp = FFN(in_features=dim, hidden_feaures=(dim * mlp_ratio), act_layer=act_layer, drop=drop)
 
-        # DropPath和Dropout思想类似，将多分支结构的子路径"随机删除"
+        # 将多分支结构的子路径"随机删除"
         self.drop_path = DropPath(drop_path) if drop_path > 0. else nn.Identity()
 
     def forward(self, x, H, W):  # x (b, n, c)
@@ -685,4 +688,5 @@ class AdaptATT(nn.Module):
         # out = self.final_conv(x)
 
         # return output, self.weight_Mamba_other, self.weight_EMA_Transformer
+
         return output, self.weight_EMA_Transformer, self.weight_Mamba_other
